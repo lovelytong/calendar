@@ -1,0 +1,26 @@
+.Calendar {
+  &__body {
+    margin: 20px auto;
+    width: 750px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &--cell {
+      width: (100% / 7);
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .no-current-month {
+      color: grey;
+    }
+    .current-date {
+      background-color: red;
+    }
+    .has-agenda {
+      background-color: yellow;
+    }
+    .pick-day {
+      background-color: purple;
+    }
+  }
+}

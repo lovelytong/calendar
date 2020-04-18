@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Calendar></Calendar>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import Calendar from "@/components/Calendar";
+import solarLunar from "./solarlunar";
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    Calendar
+  },
+  created() {
+    const solar2lunarData = solarLunar.solar2lunar(2015, 10, 8);
+    console.log("solar2lunarData", solar2lunarData);
   }
 };
 </script>
